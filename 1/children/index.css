@@ -1,0 +1,854 @@
+.clear::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+section.nov {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 848px;
+}
+section.nov .wra {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+section.nov .wra .head {
+  padding: 50px 0;
+}
+section.nov .wra .head h3 {
+  float: left;
+}
+section.nov .wra .head h3 a {
+  text-decoration: none;
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+section.nov .wra .head h3 a span {
+  color: red;
+}
+section.nov .wra .head .map {
+  width: 250px;
+  float: right;
+  margin-right: 50px;
+}
+section.nov .wra .head .map i {
+  width: 20px;
+  height: 50px;
+  font-size: 34px;
+  float: left;
+  margin-right: 15px;
+  color: #fdb62f;
+}
+section.nov .wra .head .map p {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+section.nov .wra .head .clock {
+  width: 250px;
+  float: right;
+}
+section.nov .wra .head .clock i {
+  width: 20px;
+  height: 50px;
+  font-size: 34px;
+  float: left;
+  margin-right: 15px;
+  color: #fd4d40;
+}
+section.nov .wra .head .clock p {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+section.nov .wra .daohang {
+  margin-top: 50px;
+  padding: 30px 0;
+  width: 1000px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 2;
+}
+section.nov .wra .daohang .font {
+  float: left;
+  margin-left: 20px;
+}
+section.nov .wra .daohang .font p {
+  float: left;
+  margin-right: 20px;
+  line-height: 30px;
+}
+section.nov .wra .daohang .font p:first-child a {
+  color: red;
+}
+section.nov .wra .daohang .font p a {
+  text-decoration: none;
+  color: black;
+}
+section.nov .wra .daohang .log {
+  float: right;
+  line-height: 30px;
+  margin-right: 20px;
+}
+section.nov .wra .daohang .log a {
+  margin-right: 30px;
+  font-size: 16px;
+}
+section.nov .wra .daohang .log a.fir {
+  color: aquamarine;
+}
+section.nov .wra .daohang .log a.sec {
+  color: green;
+}
+section.nov .wra .daohang .log a.thir {
+  color: #fdb62f;
+}
+section.nov .wra .kid {
+  width: 320px;
+  float: left;
+  margin-top: 240px;
+}
+section.nov .wra .kid h3 {
+  font-size: 14px;
+  color: #fd4d40;
+  font-family: "Indie Flower", cursive;
+}
+section.nov .wra .kid p {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+section.nov .wra .kid .for {
+  font-size: 18px;
+  margin: 20px 0;
+}
+section.nov .wra .kid .btn {
+  width: 170px;
+  height: 69px;
+  margin-top: 50px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #c03845;
+}
+section.nov .wra .kid .btn a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+section.nov .wra .kid .btn:hover {
+  background-color: #bd2130;
+}
+section.nov .wra .pic {
+  width: 540px;
+  position: absolute;
+  right: 0;
+  left: 520px;
+  top: 20px;
+  z-index: 0;
+}
+section.service {
+  padding: 100px;
+}
+section.service .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.service .wrap .card {
+  float: left;
+  width: 313px;
+  background-color: #fd4d40;
+  color: white;
+  position: relative;
+  margin-right: 15px;
+}
+section.service .wrap .card .logo {
+  width: 80px;
+  height: 80px;
+  background-color: #fd4d40;
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  top: -40px;
+  left: 116.5px;
+}
+section.service .wrap .card .logo i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+}
+section.service .wrap .card .neirong {
+  text-align: center;
+  padding: 50px;
+}
+section.service .wrap .card .neirong h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+section.service .wrap .card .neirong p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 25px;
+}
+section.service .wrap .cards {
+  float: left;
+  width: 313px;
+  background-color: #fdb62f;
+  color: white;
+  position: relative;
+  margin-right: 15px;
+}
+section.service .wrap .cards .logo {
+  width: 80px;
+  height: 80px;
+  background-color: #fdb62f;
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  top: -40px;
+  left: 116.5px;
+}
+section.service .wrap .cards .logo i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+}
+section.service .wrap .cards .neirong {
+  text-align: center;
+  padding: 50px;
+}
+section.service .wrap .cards .neirong h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+section.service .wrap .cards .neirong p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 25px;
+}
+section.service .wrap .carda {
+  float: left;
+  width: 313px;
+  background-color: #16c3b0;
+  color: white;
+  position: relative;
+  margin-right: 15px;
+}
+section.service .wrap .carda .logo {
+  width: 80px;
+  height: 80px;
+  background-color: #16c3b0;
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  top: -40px;
+  left: 116.5px;
+}
+section.service .wrap .carda .logo i {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+}
+section.service .wrap .carda .neirong {
+  text-align: center;
+  padding: 50px;
+}
+section.service .wrap .carda .neirong h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+section.service .wrap .carda .neirong p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 25px;
+}
+section.about {
+  padding: 50px;
+}
+section.about .warp {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.about .warp .pic {
+  width: 50%;
+  float: left;
+}
+section.about .warp .content {
+  width: 50%;
+  float: right;
+}
+section.about .warp .content .info {
+  margin-left: 100px;
+  width: 412px;
+  float: left;
+}
+section.about .warp .content .info h5 {
+  color: #fd4d40;
+  font-family: "Indie Flower";
+}
+section.about .warp .content .info h3 {
+  font-size: 30px;
+}
+section.about .warp .content .info p {
+  margin-top: 20px;
+  color: #364d59;
+  line-height: 25px;
+}
+section.about .warp .content .info .btn {
+  margin-top: 80px;
+  width: 170px;
+  height: 69px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #f0be2a;
+}
+section.about .warp .content .info .btn:hover {
+  background-color: #c69500;
+}
+section.about .warp .content .info .btn a {
+  text-decoration: none;
+  color: #212529;
+}
+section.packages {
+  padding: 50px;
+  background-color: #17a2b8;
+}
+section.packages .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.packages .wrap h5 {
+  text-align: center;
+  color: #fd4d40;
+  font-family: "Indie Flower";
+}
+section.packages .wrap h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin: 20px;
+  font-weight: bold;
+}
+section.packages .wrap .card {
+  width: 240px;
+  float: left;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+section.packages .wrap .card img {
+  margin-left: 80px;
+  width: 80px;
+  height: 80px;
+}
+section.packages .wrap .card h4 {
+  text-align: center;
+  line-height: 50px;
+  color: #16c3b0;
+}
+section.packages .wrap .card p {
+  text-align: center;
+  line-height: 30px;
+  color: #777;
+}
+section.packages .wrap .card .btn {
+  margin-top: 60px;
+  margin-left: 44px;
+  width: 152px;
+  height: 42px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #fd4d40;
+  color: white;
+}
+section.packages .wrap .card .btn:hover {
+  background-color: #e92e21;
+}
+section.packages .wrap .card .btn a {
+  text-decoration: none;
+}
+section.packages .wrap .cards {
+  width: 240px;
+  float: left;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+section.packages .wrap .cards img {
+  margin-left: 80px;
+  width: 80px;
+  height: 80px;
+}
+section.packages .wrap .cards h4 {
+  text-align: center;
+  line-height: 50px;
+  color: #71bc42;
+}
+section.packages .wrap .cards p {
+  text-align: center;
+  line-height: 30px;
+  color: #777;
+}
+section.packages .wrap .cards .btn {
+  margin-top: 60px;
+  margin-left: 44px;
+  width: 152px;
+  height: 42px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #f0be2a;
+  color: white;
+}
+section.packages .wrap .cards .btn:hover {
+  background-color: #c69500;
+}
+section.packages .wrap .cards .btn a {
+  text-decoration: none;
+}
+section.packages .wrap .carda {
+  width: 240px;
+  float: left;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+section.packages .wrap .carda img {
+  margin-left: 80px;
+  width: 80px;
+  height: 80px;
+}
+section.packages .wrap .carda h4 {
+  text-align: center;
+  line-height: 50px;
+  color: #dc3545;
+}
+section.packages .wrap .carda p {
+  text-align: center;
+  line-height: 30px;
+  color: #777;
+}
+section.packages .wrap .carda .btn {
+  margin-top: 60px;
+  margin-left: 44px;
+  width: 152px;
+  height: 42px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #14ad4f;
+  color: #777;
+}
+section.packages .wrap .carda .btn:hover {
+  background-color: #047956;
+  color: white;
+}
+section.packages .wrap .carda .btn a {
+  text-decoration: none;
+}
+section.pricing {
+  padding: 50px;
+}
+section.pricing .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+section.pricing .wrap .plan {
+  width: 313px;
+  margin-right: 20px;
+  float: left;
+}
+section.pricing .wrap .plan h5 {
+  color: #fd4d40;
+  font-family: "Indie Flower";
+  font-size: 1.2rem;
+}
+section.pricing .wrap .plan h3 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+section.pricing .wrap .plan p {
+  color: #364d59;
+  font-size: 1rem;
+  line-height: 25px;
+}
+section.pricing .wrap .silver {
+  width: 313px;
+  margin-right: 20px;
+  float: left;
+}
+section.pricing .wrap .silver .box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #16c3b0;
+  position: relative;
+}
+section.pricing .wrap .silver .box .money {
+  width: 80px;
+  height: 80px;
+  background-color: #16c3b0;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+section.pricing .wrap .silver .box .money p {
+  text-align: center;
+  line-height: 80px;
+  color: #364d59;
+  font-size: 26px;
+}
+section.pricing .wrap .silver h3 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #364d59;
+}
+section.pricing .wrap .silver p {
+  color: #364d59;
+  line-height: 30px;
+  font-size: 20px;
+}
+section.pricing .wrap .silver p i {
+  margin-right: 20px;
+  color: #16c3b0;
+}
+section.pricing .wrap .silver .btn {
+  width: 122px;
+  height: 42px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  margin-top: 50px;
+  background-color: #16c3b0;
+}
+section.pricing .wrap .golden {
+  width: 313px;
+  float: left;
+}
+section.pricing .wrap .golden .box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #16c3b0;
+  position: relative;
+}
+section.pricing .wrap .golden .box .money {
+  width: 80px;
+  height: 80px;
+  background-color: #16c3b0;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+section.pricing .wrap .golden .box .money p {
+  text-align: center;
+  line-height: 80px;
+  color: #364d59;
+  font-size: 26px;
+}
+section.pricing .wrap .golden h3 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #364d59;
+}
+section.pricing .wrap .golden p {
+  color: #364d59;
+  line-height: 30px;
+  font-size: 20px;
+}
+section.pricing .wrap .golden p i {
+  margin-right: 20px;
+  color: #fd4d40;
+}
+section.pricing .wrap .golden .btn {
+  width: 122px;
+  height: 42px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  margin-top: 50px;
+  background-color: #fd4d40;
+}
+section.client {
+  padding: 50px;
+}
+section.client .wrap {
+  width: 1000px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+section.client .wrap h5 {
+  color: #fd4d40;
+  font-family: "Indie Flower";
+  font-size: 1.25rem;
+  text-align: center;
+}
+section.client .wrap h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+section.client .wrap .card {
+  width: 610px;
+  height: 240px;
+  position: absolute;
+  background-color: #fd4d40;
+  top: 100px;
+  left: 195px;
+}
+section.client .wrap .card .pic {
+  padding: 20px;
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+section.client .wrap .card .content {
+  width: 400px;
+  float: left;
+  color: white;
+  margin: 20px;
+}
+section.client .wrap .card .content .ah {
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.5);
+}
+section.client .wrap .card .content p {
+  line-height: 30px;
+}
+section.client .wrap .num {
+  margin-top: 280px;
+  width: 610px;
+  position: absolute;
+  top: 50px;
+  left: 195px;
+  padding: 50px 0;
+}
+section.client .wrap .num .a {
+  width: 100px;
+  text-align: center;
+  float: left;
+  margin-right: 50px;
+}
+section.client .wrap .num .a .one {
+  font-size: 2rem;
+  color: #16c3b0;
+  margin-bottom: 10px;
+}
+section.client .wrap .num .a p {
+  color: #364d59;
+  font-size: 1rem;
+}
+section.client .wrap .num .b {
+  width: 100px;
+  text-align: center;
+  float: left;
+  margin-right: 50px;
+}
+section.client .wrap .num .b .two {
+  font-size: 2rem;
+  color: #fdb62f;
+  margin-bottom: 10px;
+}
+section.client .wrap .num .b p {
+  color: #364d59;
+  font-size: 1rem;
+}
+section.client .wrap .num .c {
+  width: 100px;
+  text-align: center;
+  float: left;
+  margin-right: 50px;
+}
+section.client .wrap .num .c .three {
+  font-size: 2rem;
+  color: #71bc42;
+  margin-bottom: 10px;
+}
+section.client .wrap .num .c p {
+  color: #364d59;
+  font-size: 1rem;
+}
+section.client .wrap .num .d {
+  width: 150px;
+  text-align: center;
+  float: left;
+}
+section.client .wrap .num .d .four {
+  color: #dc3545;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+section.client .wrap .num .d p {
+  color: #364d59;
+  font-size: 1rem;
+}
+section.bring {
+  background-color: #ffc107;
+  height: 150px;
+}
+section.bring .wra {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.bring .wra h3 {
+  float: left;
+  line-height: 150px;
+  font-size: 2rem;
+  color: white;
+}
+section.bring .wra .btn {
+  width: 210px;
+  height: 60px;
+  float: right;
+  margin-top: 45px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #fd4d40;
+}
+section.bring .wra .btn:hover {
+  background-color: #e92e21;
+}
+section.bring .wra .btn a {
+  text-decoration: none;
+  color: white;
+}
+section.footer {
+  padding: 50px;
+  background-color: #343a40;
+}
+section.footer .foot {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+section.footer .foot p {
+  font-size: 1rem;
+}
+section.footer .foot i {
+  color: red;
+}
+section.footer .foot a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+section.footer .foot a:hover {
+  color: white;
+}
+section.footer .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+section.footer .wrap .left {
+  width: 30%;
+  float: left;
+}
+section.footer .wrap .left h3 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin: 20px 0;
+}
+section.footer .wrap .left p {
+  margin: 20px 0;
+  line-height: 25px;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 50px;
+}
+section.footer .wrap .left input {
+  width: 186px;
+  height: 55px;
+  border-radius: 8px;
+}
+section.footer .wrap .left .btn {
+  width: 87px;
+  height: 55px;
+  border-radius: 45%;
+  border: none;
+  background-color: #fd4d40;
+  margin-left: 10px;
+}
+section.footer .wrap .left .btn:hover {
+  background-color: #e92e21;
+}
+section.footer .wrap .left .btn a {
+  text-decoration: none;
+  color: white;
+}
+section.footer .wrap .right {
+  float: right;
+}
+section.footer .wrap .right .info {
+  float: left;
+  margin-right: 50px;
+}
+section.footer .wrap .right .info h3 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin: 30px 0;
+}
+section.footer .wrap .right .info p {
+  line-height: 40px;
+  font-size: 18px;
+}
+section.footer .wrap .right .info p a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+section.footer .wrap .right .info p a:hover {
+  color: white;
+}
+section.footer .wrap .right .into {
+  float: left;
+  margin-right: 50px;
+}
+section.footer .wrap .right .into h3 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin: 30px 0;
+}
+section.footer .wrap .right .into p {
+  line-height: 40px;
+  font-size: 18px;
+}
+section.footer .wrap .right .into p a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+section.footer .wrap .right .into p a:hover {
+  color: white;
+}
+/*# sourceMappingURL=./index.css.map */

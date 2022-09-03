@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./minireset.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    .wra {
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 480px;
+        height: 270px;
+        position: relative;
+        background-image: url(./eee63cd.webp);
+        background-size: auto;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .box .zimu {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .box .bar {
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: aqua;
+    }
+
+    .wra {
+        position: relative;
+    }
+
+    .wra .mark {
+        width: 480px;
+        height: 270px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .box i {
+        font-size: 16px;
+        color: rgb(12, 12, 157);
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        margin-right: -200px;
+        width: 200px;
+        white-space: nowrap;
+
+    }
+</style>
+
+<body>
+    <div class="wra">
+
+        <div class="box">
+            <div class="zimu"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var dm = [
+        "章鱼哥还是没有胜过强风暴雨(doge)",
+        "日本裁判",
+        "日本裁判",
+        "海绵宝宝笑死我了",
+        "黑人小哥",
+        "堡垒之夜",
+        "最喜欢的一集",
+        "最喜欢的一集",
+        "喜欢",
+        "我怎么觉得派大星这个配音我在神奇宝贝里听过",
+        "我看见你了",
+        "但凡章鱼哥早点回去都不至于这样",
+        "这……这我还真有可能“模仿”",
+        "为什么非要执着于台配或者央配呢",
+        "派总依旧稳定输出",
+        "包租公～",
+        "为什么台配的海绵宝宝跟低能儿似的",
+        "井字游戏，其实可以先手必胜的",
+        "我小时候就看的台配",
+        "终于找到了",
+    ];
+    var box = document.querySelector(".box")
+    var zimu = document.querySelector(".zimu")
+    var bar = document.querySelector(".bar")
+    function totle() {
+        var current = 0
+        var id = setInterval(function () {
+            var i = document.createElement("i")
+            i.innerHTML = dm[current]
+            box.appendChild(i)
+            current++
+            console.log(current);
+            if (current == 10) {
+                clearInterval(id)
+            }
+            var x = 480
+            var y = Math.floor(Math.random() * 200)
+            setInterval(function () {
+
+                x -= 1
+                i.style.left = x + "px"
+                i.style.top = y + "px"
+            }, 1000 / 60)
+        }, 2000)
+    }
+
+    box.onmouseover = function () {
+        box.style.backgroundImage = 'url(./486142478_dc4dcb-0001.jpg)'
+        totle()
+    }
+    var y = 0
+    box.onmousemove = function (e) {
+        bar.style.width = e.offsetX + 'px'
+        var a = Math.floor(e.offsetX / 4.8 % 10)
+        box.style.backgroundPositionX = -a * 480 + "px"
+        var b = bar.offsetWidth
+        if (b % 48 == 0) {
+            y--
+            if (y % 10 == 0) {
+                y = 0
+            }
+            box.style.backgroundPositionY = y * 270 + "px"
+        }
+
+    }
+    box.onmouseout = function () {
+        box.style.backgroundImage = "url(./eee63cd.webp)"
+        box.style.backgroundPositionX = 0 + "px"
+        box.style.backgroundPositionY = 0 + "px"
+    }
+</script>
+
+</html>

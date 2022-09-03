@@ -1,0 +1,120 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.45), rgba(0, 128, 0, 0.431), rgba(0, 0, 255, 0.442), rgba(255, 255, 0, 0.431));
+  perspective: 1000px;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: aqua;
+  border-radius: 20px;
+  background-image: url(600x600.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 3s;
+  transform-style: preserve-3d;
+  transform-origin: center center 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card::after,
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 gray;
+  transition: inherit;
+}
+.card::before {
+  background-color: rgba(169, 145, 37, 0.303);
+  z-index: 1;
+}
+.card::after {
+  transform: translateZ(-20px);
+  background-color: #313131;
+  z-index: -1;
+}
+.card h3,
+.card h5,
+.card p {
+  transition: inherit;
+  z-index: 9;
+}
+.card.active {
+  transform: rotateX(60deg);
+  transform: translateZ(50deg);
+}
+.card.active::before {
+  background-color: rgba(20, 50, 245, 0.303);
+}
+.card.active::before,
+.card.active::after {
+  box-shadow: 0 0 30px 0 #ff0909;
+}
+.card.active h3 {
+  transform: translateZ(50px);
+}
+.card.active h5 {
+  transform: translateZ(30px);
+}
+.card.active ul li:nth-child(1) {
+  transform: rotate(-45deg) translateZ(150px);
+}
+.card.active ul li:nth-child(2) {
+  transform: rotate(-45deg) translateZ(80px);
+}
+.card.active ul li:nth-child(3) {
+  transform: rotate(-45deg) translateZ(80px);
+}
+.card.active ul li:nth-child(4) {
+  transform: rotate(-45deg) translateZ(60px);
+}
+.card.active ul li:nth-child(5) {
+  transform: rotate(-45deg) translateZ(75px);
+}
+ul {
+  transform-style: preserve-3d;
+  transition: inherit;
+  display: flex;
+  z-index: 9;
+}
+ul li {
+  width: 20px;
+  height: 20px;
+  margin: 30px 10px;
+  transform-style: preserve-3d;
+  transform: rotate(-45de) translate(0);
+  transition: inherit;
+  position: relative;
+  background-color: aliceblue;
+}
+ul li::after,
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  transform-origin: left bottom;
+  background-image: linear-gradient(to right, white, #969696);
+}
+ul li::before {
+  transform-origin: left ;
+  transform: rotateY(90deg) rotateX(180deg);
+}
+ul li::after {
+  transform: rotateY(90deg) rotateX(-90deg);
+}
+/*# sourceMappingURL=./style.css.map */

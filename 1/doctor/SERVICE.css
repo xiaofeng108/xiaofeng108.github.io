@@ -1,0 +1,70 @@
+.services {
+  padding: 50px 0;
+  background: url(imgs/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.services .boxA {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.services .boxA .title {
+  float: left;
+}
+.services .boxA .title p {
+  font-size: 14px;
+  color: aqua;
+}
+.services .boxA .title h3 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+.services .boxA .btn {
+  width: 160px;
+  height: 50px;
+  float: right;
+  border-radius: 3px;
+  border-color: aqua;
+  background-color: transparent;
+  color: white;
+}
+.services ul.card {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.services ul.card li .nov {
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  float: left;
+  margin: 15px;
+  padding: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.services ul.card li .nov:hover {
+  background-color: #2bbcbc;
+}
+.services ul.card li .nov img {
+  width: 60px;
+  float: left;
+  margin-right: 40px;
+}
+.services ul.card li .nov .ka {
+  float: left;
+  width: 300px;
+}
+.services ul.card li .nov .ka h5 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.services ul.card li .nov .ka p {
+  font-size: 15px;
+  color: rgba(103, 100, 100, 0.726);
+}
+/*# sourceMappingURL=./SERVICE.css.map */

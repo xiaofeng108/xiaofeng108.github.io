@@ -1,0 +1,79 @@
+* {
+  font-family: "Poppins";
+}
+.footer {
+  background-color: #58585c;
+  color: white;
+}
+.footer .concate {
+  padding: 30px 0;
+  border-bottom: 3px solid #ffffff;
+}
+.footer .concate .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.footer .concate .wrap .logo {
+  float: left;
+  margin-top: 13px;
+}
+.footer .concate .wrap ul.icons {
+  float: right;
+  overflow: hidden;
+}
+.footer .concate .wrap ul.icons li {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10px;
+}
+.footer .concate .wrap ul.icons li i {
+  color: white;
+}
+.footer .mid {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+  overflow: hidden;
+}
+.footer .mid ul.menu {
+  float: left;
+  overflow: hidden;
+}
+.footer .mid ul.menu li.card {
+  float: left;
+  margin-right: 30px;
+}
+.footer .mid ul.menu li.card h5 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 3em;
+}
+.footer .mid ul.menu li.card ul {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+.footer .mid .map {
+  height: 228px;
+  width: 300px;
+  float: right;
+  background-color: white;
+}
+.footer .under {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: 3em;
+}
+.footer .under .left {
+  float: left;
+}
+.footer .under .right {
+  float: right;
+}
+/*# sourceMappingURL=./footer.css.map */

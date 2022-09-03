@@ -1,19 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" href="./css/wallleft.css">
 </head>
-<style>
-    .box{
-        width: 100px;
-        height: 100px;
-        background-color: red;
+<style type="text/css">
+    #gallery-wrapper {
+        position: relative;
+        max-width: 65%;
+        width: 65%;
+        margin: 50px auto;
+
+    }
+
+    img.thumb {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .white-panel {
+        position: absolute;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+
+    .white-panel h1 {
+        font-size: 1em;
+    }
+
+    .white-panel h1 a {
+        color: #A92733;
+    }
+
+    .white-panel p {
+        background-image: linear-gradient(45deg, blue, red);
+        color: lightpink;
+    }
+
+    .white-panel:hover {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        margin-top: -5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 </style>
+
 <body>
-    <div class="box"></div>
+    <section id="gallery-wrapper">
+        <article class="white-panel">
+            <a href="./1/cur/index.html"><img src="imgs/1.jpg" class="thumb"></a>
+            <h1><a href="./1/cur/index.html">javascript</a></h1>
+            <p>背景轮播图</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/360/index.html"> <img src="./imgs/360.png" class="thumb"></a>
+            <h1><a href="./1/360/index.html">html+css+swiper插件</a></h1>
+            <p>仿写360浏览器</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/clothing/index.html"><img src="./imgs/cloth.jpg" class="thumb"></a>
+            <h1><a href="./1/clothing/index.html">html+css</a></h1>
+            <p>静态服装网站</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/doctor/ALLSECTION.html"><img src="./imgs/dotor.jpg" class="thumb"></a>
+            <h1><a href="./1/doctor/ALLSECTION.html">html+css</a></h1>
+            <p>静态整容网站</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/3d/index.html"><img src="./imgs/3d.jpg" class="thumb"></a>
+            <h1><a href="#">css3</a></h1>
+            <p>3d表单</p>
+        </article>
+        <article class="white-panel">
+            <a href="./"><img src="./imgs/haimian.jpg" class="thumb"></a>
+            <h1><a href="./1/">javascript</a></h1>
+            <p>仿写b站视频页面进度条带弹幕</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/children/index.html"><img src="./imgs/child.png" class="thumb"></a>
+            <h1><a href="./1/children/index.html">html+css</a></h1>
+            <p>静态儿童网站</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/loding/Loading.html"><img src="./imgs/loding.jpg" class="thumb"></a>
+            <h1><a href="./1/loding/Loading.html">css3</a></h1>
+            <p>css3动画loding</p>
+        </article>
+        <article class="white-panel">
+            <a href="./1/select/panel.html"><img src="./imgs/seclect.jpg" class="thumb"></a>
+            <h1><a href="./1/select/panel.html">javascript</a></h1>
+            <p>选项卡</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/10.jpg" class="thumb">
+            <h1><a href="#">Title 10</a></h1>
+            <p>Description 10</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/11.jpg" class="thumb">
+            <h1><a href="#">Title 11</a></h1>
+            <p>Description 11</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/12.jpg" class="thumb">
+            <h1><a href="#">Title 12</a></h1>
+            <p>Description 12</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/13.jpg" class="thumb">
+            <h1><a href="#">Title 13</a></h1>
+            <p>Description 13</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/14.jpg" class="thumb">
+            <h1><a href="#">Title 14</a></h1>
+            <p>Description 14</p>
+        </article>
+        <article class="white-panel">
+            <img src="img/15.jpg" class="thumb">
+            <h1><a href="#">Title 15</a></h1>
+            <p>Description 15</p>
+        </article>
+    </section>
+    <section class="wallleft">
+        <label for="toggle1" class="toggle1">
+            <input type="checkbox" id="toggle1" class="toggle1-input">
+            <span class="toggle1-button"></span>
+        </label>
+        <div class="left">
+            <button class="twinkle">按钮</button>
+        </div>
+    </section>
 </body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/pinterest_grid.js"></script>
+<script>
+    $(function () {
+        $("#gallery-wrapper").pinterest_grid({
+            no_columns: 3,
+            padding_x: 10,
+            padding_y: 10,
+            margin_bottom: 50,
+            single_column_breakpoint: 700
+        });
+
+    });
+
+    $(".toggle1-input").click(function () {
+        $(".left").toggleClass("active")
+
+    })
+    $(".music").mouseenter(function () {
+        $(".mark").toggleClass("active")
+    })
+    $(".twinkle").click(function () {
+        $(".left").toggleClass("active")
+    })
+
+</script>
+
 </html>

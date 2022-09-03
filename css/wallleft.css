@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 2000px;
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    margin: 0 auto;
+}
+
+.music {
+    width: 300px;
+    background-position: center;
+
+}
+
+section.javascript {
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    position: relative;
+
+}
+
+section.javascript .box .mark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f2395a;
+
+    width: 300px;
+    height: 20px;
+    z-index: 999;
+}
+
+.left {
+    width: 200px;
+    height: 600px;
+    position: fixed;
+    top: 70px;
+    left: -200px;
+    background-color: #fff;
+    visibility: hidden;
+
+   
+}
+@media screen and (max-width: 1200px){
+    .left{
+        width:160px
+        
+    }
+}
+@media screen and (max-width: 1000px){
+    .left{
+        width:130px
+        
+    }
+}
+@media screen and (max-width: 800px){
+    .left{
+        width:110px
+        
+    }
+}
+
+.left.active {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 2s;
+}
+@media screen and (max-width: 700px){
+    .left.active{
+        visibility: visible;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top:0;
+        transition: all 2s;
+    }
+}
+
+
+.toggle1 {
+    width: 80px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+@media screen and (max-width: 750px){
+    .toggle1{
+        width: 80px;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        
+    }
+}
+
+.toggle1-input {
+    display: none;
+}
+
+.toggle1-button {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    background: #00b3b4;
+    border: 1px solid #f2395a;
+    color: white;
+    width: 100%;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.toggle1-button::before {
+    position: absolute;
+    top: 5px;
+    left: 38px;
+    color: #00b3b4;
+    content: 'on';
+    display: inline-block;
+    height: 20px;
+    padding: 0 3px;
+    background: white;
+
+    transition: all 0.3s ease;
+}
+
+.toggle1-input:checked+.toggle1-button {
+    background-color: #f2395a;
+    border-color: #00b3b4;
+}
+
+.toggle1-input:checked+.toggle1-button::before {
+    left: 5px;
+    content: "off";
+    color: #f2395a;
+}
+
+.twinkle {
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-radius: 20%;
+    color: white;
+    transition: background-color .2s;
+}
+
+.twinkle::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 200%;
+    background-color: rgba(255, 255, 255, .6);
+    transform: skew(45deg) translate3d(-200px, 0, 0);
+}
+
+.twinkle:hover {
+    background-color: #2c3e50;
+}
+
+.twinkle:hover::before {
+    transition: ease-in-out .5s;
+    transform: skew(45deg) translate3d(300px, 0, 0);
+}

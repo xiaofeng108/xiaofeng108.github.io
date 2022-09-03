@@ -1,0 +1,46 @@
+.card {
+  padding: 50px 0;
+}
+
+.card .ma {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.card .ma .sc {
+  text-align: center;
+}
+
+.card .ma .sc p {
+  font-size: 14px;
+  color: #bbbfc0;
+}
+
+.card .ma .sc h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card .ma ul.icon {
+  overflow: hidden;
+}
+
+.card .ma ul.icon .genji {
+  width: 220px;
+  float: left;
+  text-align: center;
+  padding: 15px;
+}
+
+.card .ma ul.icon .genji h5 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 3.5em;
+}
+
+.card .ma ul.icon .genji p {
+  color: #a5a0a0;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=./card.css.map */

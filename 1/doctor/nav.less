@@ -1,0 +1,83 @@
+section.nav {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+
+    .logo {
+        float: left;
+        padding: 11.5px;
+    }
+
+    ul.menu {
+        float: right;
+        position: relative;
+
+
+
+        li {
+            float: left;
+            margin-right: 25px;
+            padding: 13.5px;
+
+            &:hover ul.subnav {
+                display: block;
+            }
+
+            &:hover a {
+                border-bottom: 2px solid aquamarine;
+            }
+
+            &:first-child  a{
+                border-bottom: 1px solid  aquamarine;
+                
+            }
+            &>a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+
+
+
+            }
+
+            ul.subnav {
+
+                width: 180px;
+                height: 150px;
+                background-color: black;
+                position: absolute;
+                display: none;
+
+                li {
+                    a {
+                        float: left;
+                        line-height: 1em;
+                        color: white;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            background: transparent;
+            border-color: aquamarine;
+            border-radius: 5px;
+
+            a {
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+
+
+    }
+
+
+    .clear {
+        clear: both;
+    }
+}

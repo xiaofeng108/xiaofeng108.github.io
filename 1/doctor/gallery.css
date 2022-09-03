@@ -1,0 +1,49 @@
+section.gallery {
+  overflow: hidden;
+  height: 620px;
+}
+section.gallery ul.card {
+  width: 75%;
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+section.gallery ul.card li:nth-child(1) {
+  background-image: url(imgs/gallery-1.jpg);
+}
+section.gallery ul.card li:nth-child(2) {
+  background-image: url(imgs/gallery-2.jpg);
+}
+section.gallery ul.card li:nth-child(3) {
+  background-image: url(imgs/gallery-3.jpg);
+}
+section.gallery ul.card li:nth-child(4) {
+  background-image: url(imgs/gallery-5.jpg);
+}
+section.gallery ul.card li:nth-child(5) {
+  background-image: url(imgs/gallery-6.jpg);
+}
+section.gallery ul.card li:nth-child(6) {
+  background-image: url(imgs/gallery-7.jpg);
+}
+section.gallery ul.card li {
+  width: calc(33.3% - 20px);
+  /*css3 语法 创造边距  */
+  height: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  background-position: center top;
+  background-size: cover;
+}
+section.gallery .card2 {
+  width: 25%;
+  float: right;
+  height: 620px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url(imgs/gallery-4.jpg);
+}
+/*# sourceMappingURL=./gallery.css.map */

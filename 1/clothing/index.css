@@ -1,0 +1,783 @@
+.clear::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.topnav {
+  background-color: rgba(19, 25, 23, 0.58);
+}
+.topnav .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.topnav .wrap .logo {
+  float: left;
+  font-size: 38px;
+  font-weight: bold;
+}
+.topnav .wrap .logo span {
+  font-size: 28px;
+  font-weight: normal;
+}
+.topnav .wrap ul.card {
+  float: right;
+}
+.topnav .wrap ul.card li {
+  float: left;
+  line-height: 50px;
+  margin-right: 20px;
+}
+.topnav .wrap ul.card li:first-child a {
+  color: #c91d1d;
+}
+.topnav .wrap ul.card li a {
+  text-decoration: none;
+  color: white;
+}
+.topnav .wrap ul.card li a:hover {
+  color: #c91d1d;
+}
+.topnav .wrap .nav {
+  float: right;
+  font-size: 0;
+}
+.topnav .wrap .nav .top {
+  float: left;
+}
+.topnav .wrap .nav .top .input {
+  padding: 13.5px;
+  border-radius: 15px 0 0 15px;
+  width: 150px;
+  height: 20px;
+  border-color: #ffffff;
+  color: white;
+  background-color: transparent;
+}
+.topnav .wrap .nav .top i {
+  vertical-align: bottom;
+  font-size: 15px;
+  width: 40px;
+  height: 51px;
+  background-color: #db4747;
+  line-height: 51px;
+  text-align: center;
+  border-radius: 0 15px 15px 0;
+}
+.topnav .wrap .nav .moon {
+  font-size: 20px;
+  float: right;
+  line-height: 51px;
+  margin-left: 20px;
+}
+section.setting {
+  background-image: url(imgs/b3.jpg);
+  height: 800px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+section.setting .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 25, 23, 0.58);
+  z-index: -1;
+}
+section.setting .wrap {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  width: 1000px;
+  margin: 0 auto;
+}
+section.setting .wrap .card p {
+  width: 169px;
+  height: 50px;
+  background-color: rgba(216, 210, 210, 0.3);
+  margin: 30px 0;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 20px;
+  color: white;
+}
+section.setting .wrap .card h3 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+section.setting .wrap .card h3 span {
+  font-weight: normal;
+}
+section.setting .wrap .card .btn {
+  width: 169px;
+  height: 50px;
+  background-color: #f54748;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+section.setting .wrap .card .btn:hover {
+  background-color: orange;
+}
+section.services .wra {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+section.services .wra h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+section.services .wra h3 span {
+  font-size: 26px;
+  font-weight: normal;
+}
+section.services .wra .btn {
+  width: 230px;
+  height: 51px;
+  margin-left: 385px;
+  margin-top: 50px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #f54748;
+  color: white;
+  border: none;
+}
+section.services .wra .btn:hover {
+  background-color: orange;
+}
+section.services .wra .ma li {
+  float: left;
+  width: 25%;
+}
+section.services .wra .ma li .card {
+  margin-top: 25px;
+  overflow: hidden;
+  margin-right: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+section.services .wra .ma li .card:hover .info {
+  transform: scale(1);
+}
+section.services .wra .ma li .card:hover i.fa {
+  transform: scale(0);
+}
+section.services .wra .ma li .card:hover img {
+  transform: scale(1.2);
+}
+section.services .wra .ma li .card img {
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s;
+}
+section.services .wra .ma li .card i.fa {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-color: #f54748;
+  line-height: 28px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+section.services .wra .ma li .card .info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f54747b4;
+  transform: scale(0);
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+section.services .wra .ma li .card .info .into {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 25px;
+}
+section.services .wra .ma li .card .info .into h5 {
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+}
+section.services .wra .ma li .card .info .into p {
+  line-height: 20px;
+  height: 60px;
+  font-size: 16px;
+  color: white;
+}
+section.clients .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  overflow: hidden;
+}
+section.clients .wrap h1 {
+  padding: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+section.clients .wrap h1 span {
+  font-size: 28px;
+  font-weight: normal;
+  color: #575252;
+}
+section.clients .wrap ul.card li {
+  width: calc(33% - 20px);
+  background-color: #ccc;
+  float: left;
+  margin-right: 20px;
+}
+section.clients .wrap ul.card li .info {
+  overflow: hidden;
+}
+section.clients .wrap ul.card li .info:hover h3.number {
+  color: #978b8b;
+}
+section.clients .wrap ul.card li .info i {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin: 0;
+  padding: 20px;
+}
+section.clients .wrap ul.card li .info h3.number {
+  float: right;
+  padding: 10px 30px;
+  font-size: 30px;
+  color: rgba(241, 228, 228, 0.897);
+}
+section.clients .wrap ul.card li .info .into {
+  float: left;
+  margin: 20px;
+}
+section.clients .wrap ul.card li .info .into h4 {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+section.clients .wrap ul.card li .info .into h4:hover {
+  color: red;
+}
+section.clients .wrap ul.card li .info .into p {
+  line-height: 30px;
+  font-size: 12px;
+  color: #a79d9d;
+}
+section.clients .wrap ul.card li .info .into a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid red;
+  font-size: 12px;
+}
+section.experience .wrape {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+section.experience .wrape .card {
+  float: left;
+}
+section.experience .wrape .card .left {
+  width: 50%;
+  float: left;
+}
+section.experience .wrape .card .left h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+section.experience .wrape .card .left h3 span {
+  font-weight: normal;
+}
+section.experience .wrape .card .left p {
+  font-size: 12px;
+}
+section.experience .wrape .card .left .btn {
+  margin: 20px;
+  width: 230px;
+  height: 51px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #f54748;
+  color: white;
+  border: none;
+}
+section.experience .wrape .card .left .btn:hover {
+  background-color: orange;
+}
+section.experience .wrape .card .right {
+  width: 50%;
+  float: right;
+}
+section.design {
+  background-image: url(imgs/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+section.design .content {
+  position: relative;
+}
+section.design .content .mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 370px;
+  background-color: rgba(19, 25, 23, 0.58);
+}
+section.design .content .wra {
+  width: 1000px;
+  height: 370px;
+  margin: 0 auto;
+  position: relative;
+}
+section.design .content .wra .card {
+  padding: 128.5px 0;
+  margin: auto;
+  width: 550px;
+  float: left;
+}
+section.design .content .wra .card h3 {
+  line-height: 30px;
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+section.design .content .wra .card h3 span {
+  font-weight: normal;
+  font-size: 38px;
+}
+section.design .content .wra .card p {
+  line-height: 30px;
+  color: white;
+}
+section.design .content .wra .btn button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 230px;
+  height: 51px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #f54748;
+  color: white;
+  text-align: center;
+  line-height: 51px;
+  border: none;
+}
+section.design .content .wra .btn button:hover {
+  background-color: orange;
+}
+section.works .fir {
+  position: relative;
+  padding: 50px;
+}
+section.works .fir .left {
+  float: left;
+  width: 50%;
+}
+section.works .fir .left h3 {
+  margin: 30px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+section.works .fir .left h3 span {
+  font-weight: normal;
+}
+section.works .fir .left p {
+  line-height: 30px;
+  font-size: 14px;
+  color: #857777;
+}
+section.works .fir .left .btn {
+  width: 150px;
+  height: 51px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #f54748;
+  color: white;
+  text-align: center;
+  line-height: 51px;
+  border: none;
+  margin-top: 40px;
+}
+section.works .fir .left .btn:hover {
+  background-color: orange;
+}
+section.works .fir .right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-image: url(imgs/bg2.jpg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+section.works .sec .lf {
+  width: 50%;
+  float: left;
+}
+section.works .sec .lf .fl {
+  width: 50%;
+  height: 400px;
+  float: left;
+  background-image: url(imgs/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.works .sec .lf .text {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+section.works .sec .lf .text i {
+  width: 40px;
+  height: 40px;
+  color: #f54748;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  font-size: 48px;
+}
+section.works .sec .lf .text h5 {
+  margin-top: 200px;
+  text-align: center;
+}
+section.works .sec .lf .text h5 a {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+section.works .sec .lf .text p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+section.works .sec .rh {
+  width: 50%;
+  float: left;
+}
+section.works .sec .rh .hr {
+  width: 50%;
+  height: 400px;
+  float: left;
+  background-image: url(imgs/bg4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.works .sec .rh .tet {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+section.works .sec .rh .tet i {
+  width: 40px;
+  height: 40px;
+  color: #f54748;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  font-size: 48px;
+}
+section.works .sec .rh .tet h5 {
+  margin-top: 200px;
+  text-align: center;
+}
+section.works .sec .rh .tet h5 a {
+  text-decoration: none;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+section.works .sec .rh .tet p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+section.posts {
+  padding: 50px;
+}
+section.posts .wra {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.posts .wra h3 {
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+}
+section.posts .wra h3 span {
+  font-weight: normal;
+}
+section.posts .wra .info li {
+  width: 333px;
+  float: left;
+}
+section.posts .wra .info li .card {
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
+}
+section.posts .wra .info li .card:hover .mark {
+  transform: scale(1);
+}
+section.posts .wra .info li .card:hover img {
+  transform: scale(1.2);
+}
+section.posts .wra .info li .card img {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+section.posts .wra .info li .card .mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f54747b4;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+section.posts .wra .info li .card .mark i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  font-size: 20px;
+  color: white;
+}
+section.posts .wra .info li .let {
+  padding: 10px 20px;
+}
+section.posts .wra .info li .let .left {
+  float: left;
+}
+section.posts .wra .info li .let .left a {
+  margin-right: 5px;
+  float: left;
+  color: #f54748;
+  text-decoration: none;
+}
+section.posts .wra .info li .let .left a h5 {
+  color: darkgray;
+}
+section.posts .wra .info li .let .left a h5:hover {
+  color: #f54748;
+}
+section.posts .wra .info li .let .right {
+  float: right;
+}
+section.posts .wra .info li .let .right a {
+  margin-right: 5px;
+  float: left;
+  color: #f54748;
+  text-decoration: none;
+}
+section.posts .wra .info li .let .right a h5 {
+  color: darkgray;
+}
+section.posts .wra .info li .into {
+  padding: 10px 20px;
+  float: left;
+}
+section.posts .wra .info li .into h4 a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+section.posts .wra .info li .into h4 a:hover {
+  color: #f54748;
+}
+section.posts .wra .info li .into p {
+  margin: 20px 0;
+  line-height: 30px;
+  font-size: 12px;
+}
+section.posts .wra .info li .into p.btn {
+  width: 70px;
+  font-weight: bold;
+  border-bottom: 1px solid red;
+}
+section.footer {
+  padding: 50px;
+  background-image: url(imgs/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+section.footer .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 25, 23, 0.58);
+  z-index: -1;
+}
+section.footer .wra {
+  z-index: 2;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+section.footer .wra p.di {
+  text-align: center;
+  color: white;
+}
+section.footer .wra p.di a {
+  color: white;
+}
+section.footer .wra p.di a:hover {
+  color: #f54748;
+}
+section.footer .wra .info {
+  float: left;
+  padding: 70px 0;
+}
+section.footer .wra .info .drees {
+  width: 333px;
+  float: left;
+  margin-right: 30px;
+}
+section.footer .wra .info .drees h3 {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+section.footer .wra .info .drees h3 span {
+  font-weight: normal;
+}
+section.footer .wra .info .drees p {
+  line-height: 20px;
+  margin: 40px 0;
+  color: white;
+  font-size: 16px;
+}
+section.footer .wra .info .drees .log i {
+  margin-right: 18px;
+  color: white;
+}
+section.footer .wra .info .drees .log i:hover {
+  color: #f54748;
+}
+section.footer .wra .info .quick {
+  width: 333px;
+  float: left;
+  margin-right: 50px;
+}
+section.footer .wra .info .quick .link {
+  float: left;
+}
+section.footer .wra .info .quick .link h3 {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+}
+section.footer .wra .info .quick .link p {
+  color: white;
+  margin-top: 20px;
+}
+section.footer .wra .info .quick .link p:hover {
+  color: #f54748;
+}
+section.footer .wra .info .quick .contact {
+  float: right;
+}
+section.footer .wra .info .quick .contact h3 {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+}
+section.footer .wra .info .quick .contact p {
+  color: white;
+  margin-top: 20px;
+}
+section.footer .wra .info .quick .contact .tel {
+  margin-top: 20px;
+}
+section.footer .wra .info .quick .contact .tel a {
+  color: white;
+}
+section.footer .wra .info .quick .contact .tel a:hover {
+  color: #f54748;
+}
+section.footer .wra .info .quick .contact .eml {
+  margin-top: 20px;
+}
+section.footer .wra .info .quick .contact .eml a {
+  color: white;
+}
+section.footer .wra .info .quick .contact .eml a:hover {
+  color: #f54748;
+}
+section.footer .wra .info .quick .contact .web {
+  margin-top: 20px;
+}
+section.footer .wra .info .quick .contact .web a {
+  color: white;
+}
+section.footer .wra .info .quick .contact .web a:hover {
+  color: #f54748;
+}
+section.footer .wra .info .hours {
+  float: left;
+  color: white;
+}
+section.footer .wra .info .hours h3 {
+  font-size: 23px;
+  font-weight: bold;
+}
+section.footer .wra .info .hours ul {
+  margin-top: 20px;
+}
+section.footer .wra .info .hours ul li {
+  margin-top: 12px;
+}
+/*# sourceMappingURL=./index.css.map */

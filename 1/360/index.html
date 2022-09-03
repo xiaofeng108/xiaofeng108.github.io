@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <style>
+    html,
+    body,
+    .container {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+
+    }
+
+    .container {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+    }
+
+    .timeline {
+      width: 100%;
+      background-color: #fff;
+    }
+
+    .timeline .swiper-container {
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      position: relative;
+    }
+
+    .timeline .swiper-wrapper {
+      transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+    }
+
+    .timeline .swiper-slide {
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .timeline .swiper-slide-content {
+      position: absolute;
+      text-align: center;
+      width: 100vw;
+      left: 10%;
+      top: 50%;
+      -webkit-transform: translate(50%, 0);
+      transform: translate(50%, 0);
+      z-index: 2;
+      
+    }
+
+    .timeline .swiper-slide-c {
+      position: absolute;
+      text-align: center;
+      width: 500px;
+      left: 35%;
+      top: 35%;
+      -webkit-transform: translate(50%, 0);
+      transform: translate(50%, 0);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .timeline .swiper-slide .timeline-title {
+      font-weight: 800;
+      margin: 0 0 30px;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .5s;
+      z-index: 9;
+
+
+    }
+
+    .timeline .swiper-slide .title {
+      font-weight: 800;
+      /* margin: 0 0 30px; */
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .5s;
+      z-index: 9;
+      font-size: 60px;
+    }
+
+    .timeline .swiper-slide .timeline-text {
+      margin-bottom: 0;
+      font-size: 30px;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .6s;
+      z-index: 9;
+    }
+
+    .timeline .swiper-slide .text {
+      font-size: 20px;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .6s;
+      z-index: 9;
+    }
+
+    .timeline .swiper-slide .timeline-wrote {
+      font-size: 16px;
+      margin-bottom: 30px;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .6s;
+      z-index: 9;
+    }
+
+    .timeline .swiper-slide .timeline-btn {
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .6s;
+      z-index: 9;
+      width: 200px;
+      height: 50px;
+      border-radius: 25px;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+    }
+
+    .timeline .swiper-slide-active .timeline-title {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.7s;
+    }
+
+    .timeline .swiper-slide-active .title {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.7s;
+    }
+
+    .timeline .swiper-slide-active .timeline-text {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.8s;
+    }
+
+    .timeline .swiper-slide-active .text {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.8s;
+    }
+
+    .timeline .swiper-slide-active .timeline-wrote {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.8s;
+    }
+
+    .timeline .swiper-button-next,
+    .timeline .swiper-button-prev {
+      background-size: 20px 20px;
+      top: 15%;
+      width: 20px;
+      height: 20px;
+      margin-top: 0;
+      z-index: 2;
+      transition: .2s;
+    }
+
+    .timeline .swiper-button-prev {
+      left: 8%;
+    }
+
+    .timeline .swiper-button-prev:hover {
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+
+    .timeline .swiper-button-next {
+      right: 8%;
+    }
+
+    .timeline .swiper-button-next:hover {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+
+    /* @media screen and (min-width: 768px) { */
+
+    .timeline .swiper-slide-content {
+      left: 10%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 500px;
+
+      text-align: left;
+    }
+
+    .timeline .swiper-slide-c {
+
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+
+
+    }
+
+    .timeline .swiper-slide .timeline-title {
+      font-size: 46px;
+      margin: 0;
+    }
+
+    .timeline .swiper-slide .title {
+      margin: 0;
+    }
+
+    .timeline .swiper-button-prev {
+      top: 15%;
+      left: auto;
+      right: 15%;
+      -webkit-transform: rotate(90deg) translate(0, 10px);
+      transform: rotate(90deg) translate(0, 10px);
+    }
+
+    .timeline .swiper-button-prev:hover {
+      -webkit-transform: rotate(90deg) translate(-3px, 10px);
+      transform: rotate(90deg) translate(-3px, 10px);
+    }
+
+    .timeline .swiper-button-next {
+      top: auto;
+      bottom: 15%;
+      right: 15%;
+      -webkit-transform: rotate(90deg) translate(0, 10px);
+      transform: rotate(90deg) translate(0, 10px);
+    }
+
+    .timeline .swiper-button-next:hover {
+      -webkit-transform: rotate(90deg) translate(3px, 10px);
+      transform: rotate(90deg) translate(3px, 10px);
+    }
+
+
+    .video {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .timeline .swiper-slide-c .three {
+      float: left;
+      width: 180px;
+      height: 60px;
+      border-radius: 30px;
+      border: 1px solid #FFF;
+      margin: 20px 32px;
+      font-size: 20px;
+      line-height: 60px;
+      text-align: center;
+      background-color: rgba(77, 55, 55, 0.356);
+      color: #FFF;
+    }
+
+    .timeline .swiper-slide-c .box {
+      float: left;
+      width: 180px;
+      height: 60px;
+      border-radius: 30px;
+      border: 1px solid #FFF;
+      margin: 20px 16px;
+      line-height: 60px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .timeline .swiper-slide-c .box button {
+      font-size: 20px;
+      border: none;
+      background: #fff;
+
+    }
+
+    .timeline .swiper-slide-c .box img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .container .info {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .container .info .nav {
+      width: 80%;
+    }
+
+    .container .nav img {
+      float: left;
+      margin-top: 10px;
+    }
+
+    .container .nav span {
+      float: right;
+      color: #A4A4A4;
+      margin-left: 40px;
+      line-height: 48px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="info">
+      <div class="nav">
+        <img src="./imgs/2.png" alt="">
+        <span>论坛</span>
+        <span>拓展</span>
+        <span>Mac版</span>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide-c">
+              <h4 class="title">畅快浏览 极致体验</h4>
+              <p class="text">全新Chrome内核浏览器，性能更强，速度更快</p>
+              <button class="three">32位版本</button>
+              <div class="box">
+                <img src="./imgs/1.png" alt="">
+                <button>64位版本</button>
+              </div>
+            </div>
+            <video class="video" src="./0.mp4" autoplay muted loop></video>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <h4 class="timeline-title">极速</h4>
+              <p class="timeline-text">全新Chromium内核</p>
+              <p class="timeline-wrote">性能强劲，快如闪电。</p>
+              <button class="timeline-text"
+                style="width:200px;height: 50px;border-radius: 25px;color: white;background-color: transparent;border: 1px solid white;">立即体验</button>
+            </div>
+            <video class="video" src="./1.mp4" autoplay muted loop></video>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <h4 class="timeline-title">极酷</h4>
+              <p class="timeline-text">暗夜炫黑模式</p>
+              <p class="timeline-wrote">定义酷，定义你。</p>
+              <button class="timeline-text"
+                style="width:200px;height: 50px;border-radius: 25px;color: white;background-color: transparent;border: 1px solid white;">立即体验</button>
+            </div>
+            <video class="video" src="./2.mp4" autoplay muted loop></video>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <h4 class="timeline-title">极安全</h4>
+              <p class="timeline-text">DNS加密防劫持</p>
+              <p class="timeline-wrote">安全升级，肆意无忌。</p>
+              <button class="timeline-text"
+                style="width:200px;height: 50px;border-radius: 25px;color: white;background-color: transparent;border: 1px solid white;">立即体验</button>
+            </div>
+            <video class="video" src="./3.mp4" autoplay muted loop></video>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <h4 class="timeline-title">极视界</h4>
+              <p class="timeline-text">4K高清视频播放</p>
+              <p class="timeline-wrote">还原真实之美 ，尽显万物本色。</p>
+              <button class="timeline-text"
+              style="width:200px;height: 50px;border-radius: 25px;color: white;background-color: transparent;border: 1px solid white;">立即体验</button>
+            </div>
+            <video class="video" src="./4.mp4" autoplay muted loop></video>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var timelineSwiper = new Swiper('.timeline .swiper-container', {
+      direction: 'vertical',
+      speed: 1600,
+      mousewheelControl: true,
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      breakpoints: {
+        768: {
+          direction: 'horizontal',
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

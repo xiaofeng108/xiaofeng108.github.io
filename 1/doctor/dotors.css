@@ -1,0 +1,44 @@
+section.dotors {
+  padding: 50px;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+section.dotors .title p {
+  font-size: 14px;
+  color: #7e7777;
+}
+section.dotors .title h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+section.dotors ul.card {
+  padding: 50px 0;
+  overflow: hidden;
+}
+section.dotors ul.card .over {
+  width: 33.3%;
+  float: left;
+}
+section.dotors ul.card .over img {
+  border-radius: 50%;
+  border: 10px solid #f0ecec;
+}
+section.dotors ul.card .over img:hover {
+  border: 10px solid rgba(18, 210, 228, 0.924);
+}
+section.dotors ul.card .over h5 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2em;
+}
+section.dotors ul.card .over p {
+  line-height: 2em;
+  font-size: 14px;
+  color: rgba(54, 159, 159, 0.591);
+}
+section.dotors ul.card .over .icons i {
+  margin-right: 15px;
+  color: grey;
+}
+/*# sourceMappingURL=./dotors.css.map */

@@ -1,0 +1,61 @@
+section.nav {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+section.nav .logo {
+  float: left;
+  padding: 11.5px;
+}
+section.nav ul.menu {
+  float: right;
+  position: relative;
+}
+section.nav ul.menu li {
+  float: left;
+  margin-right: 25px;
+  padding: 13.5px;
+}
+section.nav ul.menu li:hover ul.subnav {
+  display: block;
+}
+section.nav ul.menu li:hover a {
+  border-bottom: 2px solid aquamarine;
+}
+section.nav ul.menu li:first-child a {
+  border-bottom: 1px solid  aquamarine;
+}
+section.nav ul.menu li > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+section.nav ul.menu li ul.subnav {
+  width: 180px;
+  height: 150px;
+  background-color: black;
+  position: absolute;
+  display: none;
+}
+section.nav ul.menu li ul.subnav li a {
+  float: left;
+  line-height: 1em;
+  color: white;
+  border: none;
+}
+section.nav ul.menu .btn {
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border-color: aquamarine;
+  border-radius: 5px;
+}
+section.nav ul.menu .btn a {
+  text-decoration: none;
+  font-size: 18px;
+}
+section.nav .clear {
+  clear: both;
+}
+/*# sourceMappingURL=./nav.css.map */
