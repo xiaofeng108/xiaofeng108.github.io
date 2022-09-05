@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div>
+        <select class="province">
+            <option value="">请输入省名</option>
+        </select>
+        <select class="city">
+            <option value="">请输入市名</option>
+        </select>
+        <select class="district">
+            <option value="">请输入地区</option>
+        </select>
+
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script>
+    var province = $('.province')
+    var city = $('.city')
+    var district = $('.district')
+
+    $.ajax({
+        url: './1.json',
+        success: function (res) {
+            res.forEach(function (e) {
+                var arr = e.split(":")
+                var provinces = []
+                var citys = []
+                var districts = []
+                if (arr[0].length == 2) {
+                    provinces.push(arr)
+                    var hd = []
+                    hd = _.flatten(provinces)
+                    province.append(
+                        "<option value=" + hd[0] + ">" + hd[1] + "</option>"
+                    )
+                }
+                if (arr[0].length == 4) {
+                    citys.push(arr)
+                    // console.log(citys);
+                    var id = []
+                    id = _.flatten(citys)
+                    // console.log(id)
+
+                    province.change(function () {
+                        // $(".city").children().each(function (i, e) {
+                        //     if (i !== 0) {
+                        //         console.log($(e));
+                        //         $(e).remove();
+                        //     }
+                        // })
+                        var result = province.find("option:selected").val()
+
+                        $(".city").children().each(function (i, e) {
+                         
+                            if (i !== 0 && ($(e).val()).substr(0, 2) !== result) {
+                                $(e).remove();
+                            }
+                        })
+                        $(".district").children().each(function (i,e) {
+                            
+                            if (i !== 0 && ($(e).val()).substr(0, 4) !== result) {
+                                $(e).remove();
+                            }
+                        })
+                        if (id[0].substr(0, 2) == result) {
+                            city.append(
+                                "<option value=" + id[0] + ">" + id[1] + "</option>"
+                            )
+                        }
+                    })
+
+
+                }
+                if (arr[0].length == 6) {
+                    districts.push(arr)
+                    var wd = []
+                    wd = _.flatten(districts)
+                    city.change(function () {
+                        var result = city.find("option:selected").val()
+                        
+                        $(".district").children().each(function (i,e) {
+                            
+                            if (i !== 0 && ($(e).val()).substr(0, 4) !== result) {
+                                $(e).remove();
+                            }
+                        })
+                        if (wd[0].substr(0, 4) == result) {
+                            district.append(
+                                "<option value=" + wd[0] + ">" + wd[1] + "</option>"
+                            )
+
+                        }
+
+                    })
+
+                }
+            })
+
+
+
+
+
+        }
+
+    })
+</script>
+
+</html>

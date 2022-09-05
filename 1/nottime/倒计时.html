@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./minireset.css">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(./pexels-photo-1002778.jpeg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color:#ff9900;
+        opacity: 0.75;
+    }
+    .container {
+        width: 600px;
+        height: 200px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+    }
+    .container .day{
+        width: 23%;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: rgb(24, 19, 19);
+        height: 150px;
+        font-size: 50px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 150px;
+        z-index: 999;
+    }
+    .container .hour{
+        width: 23%;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: rgb(14, 12, 12);
+        height: 150px;
+        font-size: 50px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 150px;
+        z-index: 999;
+    }
+    .container .minute{
+        width: 23%;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: rgb(26, 24, 24);
+        font-size: 50px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 150px;
+        z-index: 999;
+    }
+    .container .seconds{
+        width: 23%;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: white;
+        font-size: 50px;
+        height: 150px;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 150px;
+        z-index: 999;
+    }
+</style>
+
+<body>
+    <div class="mask"></div>
+    <div class="container">
+        <div class="day"></div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="seconds"></div>
+    </div>
+</body>
+<script>
+    var hour = document.querySelector('.hour');
+    var day = document.querySelector('.day')
+    var minute = document.querySelector('.minute')
+    var seconds = document.querySelector('.seconds')
+    var inputTime = +new Date('2023-9-5 00:00:00');
+    // 获取时间戳
+    var timer = null;
+    // 定义全局变量
+    timer = setInterval(countDown,1000)
+    // 定义定时器  每一秒跳一下
+    function countDown(time) {
+        var nowTime = +new Date();
+        // 获取现在的时间
+        var times = (inputTime - nowTime)/1000;
+        // 总秒数
+        var d = parseInt(times/60/60/24);
+        // 计算天数
+        d = d<10 ?'0' +d:d;
+        day.innerHTML= d;
+        console.log(d);
+        var h = parseInt(times/60/60%24);
+        h = h<10 ?'0' +h:h;
+        hour.innerHTML= h;
+        var m = parseInt(times/60%60);
+        m = m<10 ?'0' +m:m;
+        minute.innerHTML = m;
+        var s = parseInt(times %60);
+        s = s<10 ?'0' +s:s;
+        seconds.innerHTML = s;
+        if(d == '00' && h == '00' && m =='00' && s == '00'){
+            seconds.innerHTML= '00';
+            clearInterval(timer)
+            // 消除定时器
+        }
+    }
+</script>
+
+</html>

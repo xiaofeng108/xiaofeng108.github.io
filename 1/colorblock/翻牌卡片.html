@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./minireset.css">
+</head>
+<body>
+    <ul class="stage"></ul>
+    <style>
+        
+        ul.stage {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-wrap:wrap;
+            background-color: rgb(14, 129, 129);
+            justify-content: center;
+            align-content: center;
+            margin: 0 auto;
+            perspective: 500px;
+           
+        }
+        ul.stage li{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            margin: 5px;
+            color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        
+        ul.stage  li.open{
+            transform-style: preserve-3d;
+            animation-name: move;
+            animation-duration: .3s;
+            animation-timing-function: linear;
+            color: rgb(43, 3, 3);
+           
+            
+        }
+        @keyframes move{
+            form{
+                transform:rotateY(0deg)
+            }to{
+                transform:rotateY(180deg)
+            }
+        }
+        ul.stage li.equal{
+            color: rgb(53, 6, 6);
+            background-color:red ;
+        }
+        ul.stage li i {
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        var icon = [
+        "fa-bath",
+        "fa-telegram",
+        "fa-anchor",
+        "fa-battery-quarter",
+        "fa-bank",
+        "fa-bug",
+        "fa-bus",
+        "fa-child",
+        ]
+        var stage = document.querySelector(".stage")
+        function doubArr(arr) {
+            var tmp = [];
+            arr.forEach(function (e) {
+                tmp.push(e);
+                tmp.push(e);
+            })
+            return tmp;
+        }
+        function shouf(arr) {
+            arr.sort(function () {
+                return Math.random()-0.5;
+            })
+            return arr;
+        }
+        var d = doubArr(icon)
+        var arr = shouf(d);
+        arr.forEach(function (icons) {
+            var node = document.createElement("li");
+            node.innerHTML='<i class="fa ' + icons + '"></i>';
+            stage.appendChild(node);
+            node.onclick = function () {
+                if (!this.classList.contains("equal")){
+                    this.classList.add("open");
+                    var openedLis = [];
+                    for (let i = 0; i < stage.children.length; i++) {
+                        if(stage.children[i].classList.contains("open")){
+                            openedLis.push(stage.children[i])
+                        }
+                    }
+                    if (openedLis.length===2){
+                        setTimeout(function () {
+                            openedLis[0].classList.remove("open");
+                            openedLis[1].classList.remove("open");
+                            if(openedLis[0].innerHTML === openedLis[1].innerHTML){
+                                openedLis[0].classList.add("equal");
+                                openedLis[1].classList.add("equal")
+                            }
+                        } ,300)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
