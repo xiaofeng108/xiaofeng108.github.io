@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./minireset.css">
+
+    <style>
+        #container {
+            width: 330px;
+            height: 340px;
+            margin: 180px auto;
+
+            border-radius: 10px;
+            padding: 2%;
+        }
+
+        #list {
+            width: 330px;
+            height: 340px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #list li,
+        #list span {
+            width: 100px;
+            height: 100px;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            position: relative;
+            background-color: #06268f;
+            margin: 1.4%;
+            border-radius: 5px;
+            color: white;
+        }
+
+        #list li .info {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #list li .mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            display: none;
+        }
+
+        #startbutton {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #list .active .mask {
+            display: block;
+        }
+
+        #message {
+            line-height: 32px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            width: 300px;
+            height: 50px;
+            margin-left: -150px;
+            display: none;
+            background-color: #ff3a59;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <ul id="list">
+
+            <li>
+                <div class="info">手机</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">平板</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">电磁炉</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">电视</div>
+                <div class="mask"></div>
+            </li>
+            <span id="startbutton" style="background-color: #ff3a59;">开始抽奖</span>
+            <li>
+                <div class="info">洗衣机</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">电脑</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">冰箱</div>
+                <div class="mask"></div>
+            </li>
+            <li>
+                <div class="info">衣柜</div>
+                <div class="mask"></div>
+            </li>
+        </ul>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        var container = document.getElementById('container')
+        var li = container.getElementsByTagName('li')
+        var span = document.getElementById('startbutton')
+        var message = document.getElementById('message')
+        var timer = null;
+        var bReady = true;
+        var prize = [0, 1, 2, 4, 7, 6, 5, 3];
+        var num = 0;
+        span.onclick = function startlottery() {
+            if (bReady) {
+                message.style.display = "none";
+                span.style.background = "red";
+                bReady = false;
+                num = getrandomnum(1, 9)
+                startinit(num);
+            }
+        }
+        function getrandomnum(n, m) {
+            return parseInt((m - n) * Math.random() + n);
+        }
+
+
+        function startinit(num) {
+            var i = 0;
+            var t = 80;
+            var rounds = 3;
+            var rNum = rounds * 8;
+            timer = setTimeout(startscroll, t);
+
+
+
+            function startscroll() {
+
+
+                for (var j = 0; j < li.length; j++) {
+                    li[j].className = '';
+                }
+
+                var prizenum = prize[i % li.length];
+                li[prizenum].className = "active";
+                i++;
+
+                if (i < rNum - 8) {
+                    timer = setTimeout(startscroll, t);
+                } else if (i >= rNum - 8 && i < rNum + num) {
+
+                    t += (i - rNum + 8) * 5;
+                    timer = setTimeout(startscroll, t);
+                }
+                if (i >= rNum + num) {
+
+                    if (num == 1) {
+                        message.innerHTML = "恭喜你中了手机";
+                    } else if (num == 2) {
+                        message.innerHTML = "恭喜你中了平板";
+                    } else if (num == 3) {
+                        message.innerHTML = "恭喜中了电磁炉";
+                    } else if (num == 4) {
+                        message.innerHTML = "恭喜你中了洗衣机";
+                    } else if (num == 5) {
+                        message.innerHTML = "恭喜你中了衣柜";
+                    } else if (num == 6) {
+                        message.innerHTML = "恭喜你中了冰箱";
+                    } else if (num == 7) {
+                        message.innerHTML = "恭喜你中了电脑";
+                    } else if (num == 8) {
+                        message.innerHTML = "恭喜你中了电视";
+                    }
+
+                    var timer2 = null;
+                    timer2 = setTimeout(function () {
+                        message.style.display = "block";
+                        span.style.background = "#ff3a59";
+                        clearTimeout(timer2);
+                    }, 1000);
+                    bReady = true;
+                    clearTimeout(timer);
+                }
+
+            }
+        }
+
+    </script>
+
+
+</body>
